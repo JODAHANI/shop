@@ -15,7 +15,7 @@ const config = require("./config/key");
 //   .catch(err => console.error(err));
 
 const mongoose = require("mongoose");
-const connect = mongoose.connect(config.mongoURI,
+const connect = mongoose.connect("mongodb+srv://joda:asd123@cluster0.exq1i.mongodb.net/shop?retryWrites=true&w=majority",
   {
     useNewUrlParser: true, useUnifiedTopology: true,
     useCreateIndex: true, useFindAndModify: false
@@ -34,6 +34,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use('/api/users', require('./routes/users'));
+app.use('/api/product', require('./routes/product'));
 
 
 //use this to show the image you have in node js server to client (react js)
@@ -53,7 +54,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const port = process.env.PORT || 5000
+const port = 8080
 
 app.listen(port, () => {
   console.log(`Server Listening on ${port}`)
