@@ -21,6 +21,7 @@ const productSchema = mongoose.Schema({
         type: Array,
         default: []
     },
+
     sold: {
         type: Number,
         maxlength: 100,

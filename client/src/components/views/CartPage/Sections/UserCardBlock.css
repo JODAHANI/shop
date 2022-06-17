@@ -1,0 +1,35 @@
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td,
+.table th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.table tr:nth-child(even) td {
+    color: #222;
+}
+.table .btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #222;
+    font-weight: 400;
+    font-size: 0.8rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.table .btn-td{
+    text-align: center;
+}
+.table .del{
+    width: 50px;
+}
